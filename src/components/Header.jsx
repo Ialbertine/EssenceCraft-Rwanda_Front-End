@@ -29,7 +29,7 @@ const Header = () => {
         </Link>
         <div className="relative flex items-center">
           <Link
-            className="flex items-center hover:text-[#c04242] text-[17px] font-medium"
+            className="flex items-center hover:text-[#c04242] text-[17px] font-medium transition duration-500 ease-in-out"
             to="#"
             onMouseEnter={() => toggleDropdown("categories")}
             onMouseLeave={() => toggleDropdown("categories")}
@@ -37,7 +37,10 @@ const Header = () => {
             Categories <ChevronDownIcon className="w-4 h-4 ml-1" />
           </Link>
           {activeDropdown === "categories" && (
-            <div className="absolute top-8 bg-[#f4f1f1] text-black p-2 shadow-lg mt-2 transition ease-in-out duration-500 w-[10rem]">
+            <div
+              className={`absolute top-8 bg-[#f4f1f1] text-black p-2 shadow-lg mt-2 w-[10rem] 
+                   animate-dropdown-appear transition duration-300 ease-in-out`}
+            >
               <Link
                 className="block px-2 py-1 hover:bg-[gray] transition ease-in-out duration-600"
                 to="#"
@@ -61,7 +64,7 @@ const Header = () => {
         </div>
         <div className="relative flex items-center">
           <Link
-            className="flex items-center hover:text-[#c04242] text-[17px] font-medium"
+            className="flex items-center hover:text-[#c04242] text-[17px] font-medium transition duration-500 ease-in-out"
             to="#"
             onMouseEnter={() => toggleDropdown("shops")}
             onMouseLeave={() => toggleDropdown("shops")}
@@ -69,7 +72,10 @@ const Header = () => {
             Shops <ChevronDownIcon className="w-4 h-4 ml-1" />
           </Link>
           {activeDropdown === "shops" && (
-            <div className="absolute top-8 bg-[#f4f1f1] text-black p-2 shadow-lg mt-2 transition ease-in-out duration-500 w-[10rem]">
+            <div
+              className={`absolute top-8 bg-[#f4f1f1] text-black p-2 shadow-lg mt-2 w-[10rem] 
+                   animate-dropdown-appear transition duration-300 ease-in-out`}
+            >
               <Link
                 className="block px-2 py-1 hover:bg-[gray] transition ease-in-out duration-600"
                 to="/"
@@ -93,7 +99,7 @@ const Header = () => {
         </div>
         <div className="relative flex items-center">
           <Link
-            className="flex items-center hover:text-[#c04242] text-[17px] font-medium"
+            className="flex items-center hover:text-[#c04242] text-[17px] font-medium transition duration-500 ease-in-out"
             to="#"
             onMouseEnter={() => toggleDropdown("pages")}
             onMouseLeave={() => toggleDropdown("pages")}
@@ -101,7 +107,10 @@ const Header = () => {
             Pages <ChevronDownIcon className="w-4 h-4 ml-1" />
           </Link>
           {activeDropdown === "pages" && (
-            <div className="absolute top-8 bg-[#f4f1f1] text-black p-2 shadow-lg mt-2 transition ease-in-out duration-600 w-[10rem]">
+            <div
+              className={`absolute top-8 bg-[#f4f1f1] text-black p-2 shadow-lg mt-2 w-[10rem] 
+                   animate-dropdown-appear transition duration-300 ease-in-out`}
+            >
               <Link
                 className="block px-2 py-1 hover:bg-[gray] transition ease-in-out duration-600"
                 to="/"
@@ -124,13 +133,13 @@ const Header = () => {
           )}
         </div>
         <Link
-          className="flex items-center hover:text-[#c04242] text-[17px] font-medium"
+          className="flex items-center hover:text-[#c04242] text-[17px] font-medium transition duration-500 ease-in-out"
           to="/"
         >
           Contact
         </Link>
       </div>
-      <div className="flex items-center lg:flex gap-2 sm:hidden">
+      <div className="flex items-center lg:flex gap-4 sm:hidden">
         <Link to="">
           {" "}
           <CiSearch className="w-6 h-6" />
